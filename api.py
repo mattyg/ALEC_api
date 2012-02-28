@@ -12,8 +12,11 @@ import hashlib
 import uuid
 import logging
 
+# SITE ROOT URL
 root_url = 'http://gabrenya.com:8080'
+# ROOT PATH to application
 root_path = ''
+# sendmail path
 web.config.sendmail_path='/usr/sbin/sendmail'
 
 urls = ('^'+root_path+'/api/(corporations|politicians|model_bills|task_forces)/(get|getList).(xml|json)','dispatch',
@@ -21,8 +24,10 @@ urls = ('^'+root_path+'/api/(corporations|politicians|model_bills|task_forces)/(
 	'^'+root_path+'/register','register',
 	'^'+root_path+'/register/activate/(.*)','activate')
 
+# database
 db = web.database(dbn='sqlite', db='alecdata.db')
-logging.basicConfig(filename='api.log',level=logging.DEBUG)
+
+logging.basicConfig(filename='logs/api.log',level=logging.DEBUG)
 templates = web.template.render('templates/')
 app = web.application(urls,globals())
 

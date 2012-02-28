@@ -6,7 +6,7 @@ import web
 import subprocess
 
 db = web.database(dbn='sqlite', db='alecdata.db')
-logging.basicConfig(filename='billcleaner.log',level=logging.DEBUG)
+logging.basicConfig(filename='logs/billcleaner.log',level=logging.DEBUG)
 
 
 

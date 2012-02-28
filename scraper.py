@@ -8,7 +8,7 @@ import logging
 import web
 
 db = web.database(dbn='sqlite', db='alecdata.db')
-logging.basicConfig(filename='webscraping.log',level=logging.DEBUG)
+logging.basicConfig(filename='logs/webscraping.log',level=logging.DEBUG)
 sunlight.config.API_KEY = 'b281fd9d3a124f53970f623de12b0596'
 
 class corporations:
