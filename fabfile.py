@@ -24,4 +24,4 @@ def deploy_gabrenya():
 
 def update_source():
 	local('cp templates/main.md README')
-	local('git add -A && git commit && git push origin master')
+	local('git add -A && git push origin master')
